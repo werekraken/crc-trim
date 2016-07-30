@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     crc1 ^= crc2;
 
     /* put operator for one zero bit in odd */
-    odd[0] = 0xdb710641UL;          /* used sage math to get inverse matrix polynomial */
+    odd[0] = 0xdb710641UL;          /* CRC-32 "Un"polynomial */
     row = 0x80000000UL;
     for (n = 1; n < GF2_DIM; n++) {
         odd[n] = row;
